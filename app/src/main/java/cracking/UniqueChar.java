@@ -3,12 +3,16 @@ package cracking;
 import java.util.HashSet;
 
 public class UniqueChar {
+
+    /**
+     * Brute force.
+     */
     public static boolean isUnique(String str) {
         if (str == null || str.equals("")) {
             return false;
         }
 
-        var len = str.length();
+        int len = str.length();
 
         for (int i = 0; i < len; i++) {
             for (int j = i + 1; j < len; j++) {
@@ -29,7 +33,7 @@ public class UniqueChar {
         var dict = new HashSet<Character>();
 
         for (int i = 0; i < str.length(); i++) {
-            var ch = str.charAt(i);
+            char ch = str.charAt(i);
             if (dict.contains(ch)) {
                 return false;
             } else {
@@ -45,14 +49,14 @@ public class UniqueChar {
             return false;
         }
 
-        var array = new boolean[128];
+        var charSet = new boolean[128];
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (array[ch]) {
+            if (charSet[ch]) {
                 return false;
             } else {
-                array[ch] = true;
+                charSet[ch] = true;
             }
         }
 
@@ -60,20 +64,15 @@ public class UniqueChar {
     }
 
     public static boolean isUniqueLowerLetter(String str) {
-        // Only 26 characters
-        if (str.length() > 26) {
-            return false;
-        }
-
-        var checker = 0;
+        int checker = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            int value = str.charAt(i) - 'a';
-            if ((checker & (1 << value)) > 0) {
+            int val = str.charAt(i) - 'a';
+            if ((checker & (1 << val)) > 0) {
                 return false;
             }
 
-            checker |= (1 << value);
+            checker |= (1 << val);
         }
 
         return true;

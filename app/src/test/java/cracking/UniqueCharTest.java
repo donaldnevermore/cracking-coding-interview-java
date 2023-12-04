@@ -1,9 +1,10 @@
 package cracking;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class UniqueCharTest {
+
     @Test
     public void shouldAnswerWithTrue() {
         assertEquals(false, UniqueChar.isUnique("hello"));

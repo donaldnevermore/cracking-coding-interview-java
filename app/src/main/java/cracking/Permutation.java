@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Arrays;
 
 public class Permutation {
+
     public static boolean isPermutationAscii(String first, String second) {
         if (first == null || second == null) {
             return false;
@@ -14,17 +15,13 @@ public class Permutation {
         }
 
         // Provided ASCII String.
-        int[] letters = new int[128];
-
+        var letters = new int[128];
         for (int i = 0; i < first.length(); i++) {
-            var ch = first.charAt(i);
-            letters[ch]++;
+            letters[first.charAt(i)]++;
         }
 
         for (int i = 0; i < second.length(); i++) {
-            var ch = second.charAt(i);
-            letters[ch]--;
-
+            letters[second.charAt(i)]--;
             if (letters[second.charAt(i)] < 0) {
                 return false;
             }
