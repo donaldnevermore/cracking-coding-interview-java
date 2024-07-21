@@ -6,6 +6,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(Hoo.Bar(0));
+        System.out.println("abe".compareTo("abc"));
     }
 }
