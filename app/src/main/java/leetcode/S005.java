@@ -28,4 +28,34 @@ public class S005 {
             right++;
         }
     }
+
+    public String longestPalindromeDP(String s) {
+        int len = s.length();
+        var dp = new boolean[len][len];
+        for (int i = 0; i < len; i++) {
+            dp[i][i] = true;
+        }
+
+        int longest = 1;
+        int position = 0;
+
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j <= i; j++) {
+                boolean isEqual = s.charAt(j) == s.charAt(i);
+                if (i - j <= 1) {
+                    dp[j][i] = isEqual;
+                } else {
+                    dp[j][i] = isEqual && dp[j + 1][i - 1];
+                }
+
+                int distance = i - j + 1;
+                if (dp[j][i] && longest < distance) {
+                    longest = distance;
+                    position = j;
+                }
+            }
+        }
+
+        return s.substring(position, position + longest);
+    }
 }
