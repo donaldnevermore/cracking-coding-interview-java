@@ -1,6 +1,6 @@
 package leetcode;
 
-public class S005 {
+public class N005 {
     private int longest = 1;
     private int position = 0;
 

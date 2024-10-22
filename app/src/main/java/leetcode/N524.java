@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.List;
 
-class S524 {
+class N524 {
     public String findLongestWord(String s, List<String> dictionary) {
         var longest = "";
         for (String word : dictionary) {

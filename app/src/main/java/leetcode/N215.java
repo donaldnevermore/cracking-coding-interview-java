@@ -1,6 +1,6 @@
 package leetcode;
 
-class S215 {
+class N215 {
     public int findKthLargest(int[] nums, int k) {
         int n = nums.length - k;
         int lo = 0, hi = nums.length - 1;
