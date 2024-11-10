@@ -1,13 +1,11 @@
 package cracking;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class PalindromePermutationTest {
-    @Test
-    public void test() {
+class PalindromePermutationTest {
+    @Test void test() {
         assertEquals(true, PalindromePermutation.is("Tact Coa"));
-
         assertEquals(true, PalindromePermutation.is2("odd"));
     }
 }

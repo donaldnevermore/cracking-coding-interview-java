@@ -1,12 +1,10 @@
 package cracking;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class UniqueCharTest {
-
-    @Test
-    public void shouldAnswerWithTrue() {
+class UniqueCharTest {
+    @Test void shouldAnswerWithTrue() {
         assertEquals(false, UniqueChar.isUnique("hello"));
         assertEquals(true, UniqueChar.isUnique("world"));
         assertEquals(true, UniqueChar.isUnique("你好世界"));

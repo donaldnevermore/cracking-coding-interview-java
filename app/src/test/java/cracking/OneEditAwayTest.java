@@ -1,11 +1,10 @@
 package cracking;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class OneEditAwayTest {
-    @Test
-    public void shouldAnswerWithTrue() {
+class OneEditAwayTest {
+    @Test void shouldAnswerWithTrue() {
         assertEquals(true, OneEditAway.is("pale", "ple"));
         assertEquals(true, OneEditAway.is("pales", "pale"));
         assertEquals(true, OneEditAway.is("pale", "bale"));

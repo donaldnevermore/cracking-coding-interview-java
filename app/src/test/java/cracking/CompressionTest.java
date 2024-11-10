@@ -1,11 +1,12 @@
 package cracking;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class CompressionTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class CompressionTest {
     @Test
-    public void testCompress() {
+    void testCompress() {
         assertEquals("a2b1c5a3", Compression.compress("aabcccccaaa"));
     }
 }

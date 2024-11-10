@@ -1,11 +1,10 @@
 package cracking;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class PermutationTest {
-    @Test
-    public void testIsPermutation() {
+class PermutationTest {
+    @Test void testIsPermutation() {
         assertEquals(false, Permutation.isPermutationAscii("hello", "world"));
         assertEquals(true, Permutation.isPermutationAscii("god", "dog"));
 
